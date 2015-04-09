@@ -26,7 +26,7 @@ This script is used to firstly start the *Sinatra* application using ```bundle e
 ### Conf: /etc/nginx/site-available/default
 This configuration file is over written with our template file **files/simple-deployment.conf** to set the behaviour of the **nginx** default site.
 
-### Files: /var/www/simple-deployment
+### File: /var/www/simple-deployment
 For now, the simple Sinatra application files are included as part of this solution. The next challenge will be download the application files from GitHub at https://github.com/tnh/simple-sinatra-app where these site files have been derived from.
 
 ## Docker
@@ -59,7 +59,12 @@ To stop your container, execute:
 sudo docker stop simple-deployment
 ```
 
-And once your finished, execute:
+If you do need to restart the container, execute:
+```bash
+sudo docker start simple-deployment
+```
+
+And once your finished and no longer need the container, remove it by executing:
 ```bash
 sudo docker rm simple-deployment
 ```
