@@ -1,3 +1,4 @@
-sudo docker run -d --name="simple-deployment" --restart=always -p=8090:80 simple-deployment:0.1
+sudo docker build --tag="simple-deployment:0.2" .
+sudo docker run -d --name="simple-deployment" --restart=always -p=8090:80 simple-deployment:0.2
 sudo docker stop simple-deployment
 sudo docker rm simple-deployment
